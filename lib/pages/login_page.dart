@@ -14,14 +14,16 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[200], //torcar por imagem
+      backgroundColor: Colors.grey[200],
       body: SafeArea(
         child: SingleChildScrollView(
           child: Container(
-            margin: EdgeInsets.all(20),
+            //decoração do container
+            margin: EdgeInsets.fromLTRB(
+                20, MediaQuery.of(context).size.width / 2, 20, 20),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(20),
-              color: Colors.deepPurple[300],
+              color: Colors.grey[200],
               shape: BoxShape.rectangle,
               boxShadow: [
                 BoxShadow(
@@ -35,10 +37,36 @@ class _LoginPageState extends State<LoginPage> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 SizedBox(height: 20),
-                //Email textfield //campo de texto do email //email
+
+                //texto de cima
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 25.0),
+                  child: Text(
+                    "Universidade de Fortaleza",
+                    style: GoogleFonts.bebasNeue(
+                      fontSize: 50,
+                      color: Colors.grey[900],
+                    ),
+                  ),
+                ),
+                SizedBox(height: 10),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 25.0),
+                  child: Text(
+                    "Ensinando e aprendendo",
+                    style: GoogleFonts.robotoCondensed(
+                      fontSize: 24,
+                      color: Colors.grey[900],
+                    ),
+                  ),
+                ),
+                SizedBox(height: 30),
+
+                //matricula textfield //campo de texto do matricula //matricula
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 25.0),
                   child: TextField(
+                    keyboardType: TextInputType.number,
                     decoration: InputDecoration(
                       suffixIcon: Icon(Icons.account_circle_rounded),
                       enabledBorder: OutlineInputBorder(
@@ -54,9 +82,7 @@ class _LoginPageState extends State<LoginPage> {
                     ),
                   ),
                 ),
-                SizedBox(
-                  height: 10,
-                ),
+                SizedBox(height: 15),
 
                 //Password Textfiel //campo de texto da senha //password
                 Padding(
@@ -78,11 +104,9 @@ class _LoginPageState extends State<LoginPage> {
                     ),
                   ),
                 ),
-                SizedBox(
-                  height: 10,
-                ),
+                SizedBox(height: 25),
 
-                //Sign in Button //botão de login // sign in
+                //Botão de acesso
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 25.0),
                   child: GestureDetector(
@@ -105,9 +129,8 @@ class _LoginPageState extends State<LoginPage> {
                     ),
                   ),
                 ),
-                SizedBox(
-                  height: 20,
-                ),
+                SizedBox(height: 20),
+
               ],
             ),
           ),
