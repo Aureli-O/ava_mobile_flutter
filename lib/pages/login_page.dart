@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'home_page.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -109,28 +110,30 @@ class _LoginPageState extends State<LoginPage> {
                 //Botão de acesso
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 25.0),
-                  child: GestureDetector(
-                    child: Container(
-                      padding: EdgeInsets.all(17),
-                      decoration: BoxDecoration(
-                        color: Colors.indigo,
+                  child: ElevatedButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => HomePage()),
+                      );
+                    },
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.indigo,
+                      foregroundColor: Colors.grey[200],
+                      fixedSize: Size(150, 50),
+                      textStyle: TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                      ),
+                      shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(12),
                       ),
-                      child: Center(
-                        child: Text(
-                          'Acessar',
-                          style: TextStyle(
-                            color: Colors.grey[200],
-                            fontWeight: FontWeight.bold,
-                            fontSize: 18,
-                          ),
-                        ),
-                      ),
                     ),
+                    child: Text("Acessar"),
                   ),
                 ),
+                
                 SizedBox(height: 20),
-
               ],
             ),
           ),
