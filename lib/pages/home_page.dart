@@ -13,11 +13,11 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   final List _Cadeiras = [
-    "Cadeira 1",
-    "Cadeira 2",
-    "Cadeira 3",
-    "Cadeira 4",
-    "Cadeira 5",
+    "Fundamentos do Cuidado Nutricional",
+    "Práticas Dietéticas",
+    "Nutrição no Processo Saúde Doença",
+    "Integração Metabolica",
+    "Saúde Coletiva",
   ];
 
   @override
