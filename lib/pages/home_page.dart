@@ -19,6 +19,13 @@ class _HomePageState extends State<HomePage> {
     "Integração Metabolica",
     "Saúde Coletiva",
   ];
+  final List _Professor = [
+    "nome1",
+    "nome1",
+    "nome1",
+    "nome1",
+    "nome1",
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -47,6 +54,7 @@ class _HomePageState extends State<HomePage> {
         itemBuilder: (context, index) {
           return MyCard(
             NomeCadeira: _Cadeiras[index],
+            NomeProfessor: _Professor[index],
           );
         },
       ),
