@@ -21,10 +21,34 @@ class _HomePageState extends State<HomePage> {
   ];
   final List _Professor = [
     "nome1",
-    "nome1",
-    "nome1",
-    "nome1",
-    "nome1",
+    "nome2",
+    "nome3",
+    "nome4",
+    "nome5",
+  ];
+  final List _Horarios = [
+    "4AB",
+    "6CD",
+    "2AB",
+    "5AB-CD",
+    "3EF",
+    "6EF",
+  ];
+  final List _Frequencia = [
+    "90%",
+    "89%",
+    "70%",
+    "100%",
+    "78%",
+    "90%",
+  ];
+  final List _Sala = [
+    "H56",
+    "D46",
+    "D33",
+    "T56",
+    "H34",
+    "D14",
   ];
 
   @override
@@ -55,6 +79,9 @@ class _HomePageState extends State<HomePage> {
           return MyCard(
             NomeCadeira: _Cadeiras[index],
             NomeProfessor: _Professor[index],
+            Horarios: _Horarios[index],
+            Frequencia: _Frequencia[index],
+            Sala: _Sala[index],
           );
         },
       ),
