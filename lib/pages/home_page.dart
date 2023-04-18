@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
+import 'package:ava_mobile_flutter/pages/profile_page.dart';
 import 'package:ava_mobile_flutter/widgets/card.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -66,10 +67,18 @@ class _HomePageState extends State<HomePage> {
           ),
         ),
         actions: [
-          Container(
-            margin: EdgeInsets.only(right: 15),
-            child: Icon(Icons.account_circle_rounded),
-          ),
+          GestureDetector(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => ProfilePage()),
+              );
+            },
+            child: Container(
+              margin: EdgeInsets.only(right: 15),
+              child: Icon(Icons.account_circle_rounded),
+            ),
+          )
         ],
       ),
       //Lista de Cadeiras//usando list view
