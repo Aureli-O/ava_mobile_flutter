@@ -14,14 +14,14 @@ class _ProfilePageState extends State<ProfilePage> {
   Student studentM = new Student(
       imagePath:
           "https://pps.whatsapp.net/v/t61.24694-24/307108573_462481232600602_3637140898630552775_n.jpg?stp=dst-jpg_s96x96&ccb=11-4&oh=01_AdRL9xO_9stemlKkEgvWzgFKG71uomjN8RtXA0SOBwLrlQ&oe=6451AA73",
-      name: "Joaozinho da silva pereira",
-      email: "joaozinho@unifor.br",
+      name: "João da Silva Pereira",
+      email: "joaoSP@unifor.br",
       about:
           "Esta é uma pessoa única e interessante. Ela tem uma curiosidade natural pelo mundo e pelas pessoas ao seu redor. Ela valoriza a honestidade, a empatia e o respeito. Além disso, ela está sempre aberta a novas experiências e desafios, e está animada para ver o que o futuro reserva.",
       registry: "2214763-2",
       ongoingCredits: "360",
       completedCredits: "720",
-      course: "Ciência da Computação",
+      course: "Nutrição",
       pmg: "7.52",
       birthday: "19/09/2004");
   // criei esse objeto ai q é so mudar

@@ -21,11 +21,11 @@ class _HomePageState extends State<HomePage> {
     "Saúde Coletiva",
   ];
   final List _Professor = [
-    "nome1",
-    "nome2",
-    "nome3",
-    "nome4",
-    "nome5",
+    "Aline Sousa ",
+    "Lívia Queiroz",
+    "Jonas Jonathan",
+    "George Felipe",
+    "Felipe Horácio",
   ];
   final List _Horarios = [
     "4AB",
