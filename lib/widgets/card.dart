@@ -3,6 +3,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import '../pages/cadeira_page.dart';
+
 class MyCard extends StatelessWidget {
   final String NomeCadeira;
   final String NomeProfessor;
@@ -21,7 +23,12 @@ class MyCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => {},
+      onTap: () => {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => CadeiraPage()),
+        ),
+      },
       child: Padding(
         padding: const EdgeInsets.fromLTRB(15, 10, 15, 10),
         child: Container(
