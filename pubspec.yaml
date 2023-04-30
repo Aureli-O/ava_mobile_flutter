@@ -10,6 +10,7 @@ dependencies:
   flutter:
     sdk: flutter
   google_fonts: ^4.0.3
+  flutter_launcher_icons: ^0.13.1
 
 dev_dependencies:
   flutter_test:
@@ -18,5 +19,9 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
-  assets:
-    - lib/images/
+
+flutter_icons:
+  image_path: "lib/assets/logo_icon.png"
+  android: "launcher_icon"
+  ios: true
+  remove_alpha_ios: true
