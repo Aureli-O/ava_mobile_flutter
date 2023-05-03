@@ -12,7 +12,16 @@ class _CadeiraPageState extends State<CadeiraPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.grey[200],
-      body: Text("TELA DA CADEIRA"), //faça bem feito,qualquer coisa faço modificações,mas faça bem feito
+      appBar: AppBar(
+        backgroundColor: Colors.indigo,
+        title: Text(
+          "Fundamentos do Cuidado Nutricional",
+          style: TextStyle(
+            fontSize: 18,
+            color: Colors.grey[200],
+          ),
+        ),
+      ),
     );
   }
 }
