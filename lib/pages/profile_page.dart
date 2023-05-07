@@ -11,9 +11,9 @@ class ProfilePage extends StatefulWidget {
 
 class _ProfilePageState extends State<ProfilePage> {
   @override
-  Student studentM = new Student(
+  Student studentM = const Student(
       imagePath:
-          "https://pps.whatsapp.net/v/t61.24694-24/307108573_462481232600602_3637140898630552775_n.jpg?stp=dst-jpg_s96x96&ccb=11-4&oh=01_AdRL9xO_9stemlKkEgvWzgFKG71uomjN8RtXA0SOBwLrlQ&oe=6451AA73",
+          "https://cdn.discordapp.com/attachments/731725660438921217/1104590893350129794/IMG-20230506-WA0054.jpg",
       name: "João da Silva Pereira",
       email: "joaoSP@unifor.br",
       about:
@@ -29,6 +29,16 @@ class _ProfilePageState extends State<ProfilePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.grey[200],
+      appBar: AppBar(
+        backgroundColor: Colors.indigo,
+        title: Text(
+          "Meu perfil",
+          style: TextStyle(
+            fontSize: 18,
+            color: Colors.grey[200],
+          ),
+        ),
+      ),
       body: ListView(
         physics: BouncingScrollPhysics(),
         children: [
