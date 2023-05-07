@@ -13,7 +13,7 @@ class _ProfilePageState extends State<ProfilePage> {
   @override
   Student studentM = const Student(
       imagePath:
-          "https://cdn.discordapp.com/attachments/731725660438921217/1104590893350129794/IMG-20230506-WA0054.jpg",
+          "https://s2.glbimg.com/gZrnzQkY70EZ2ZP0zwB689bUAak=/0x0:5184x3456/1008x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2020/9/e/EYKMBXR72tNdkUAgmZzQ/azul-caneta.jpg",
       name: "João da Silva Pereira",
       email: "joaoSP@unifor.br",
       about:

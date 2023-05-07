@@ -17,7 +17,7 @@ class _CadeiraPageState extends State<CadeiraPage> {
     name: "Fundamentos do Cuidado Nutricional",
     professorImage: "https://agendor-blog-uploads.s3.sa-east-1.amazonaws.com/2018/04/02165825/linguagem-corporal-masculina-02.jpg",
     imagePath: "https://img.freepik.com/fotos-gratis/plano-de-fundo-de-programacao-com-pessoa-trabalhando-com-codigos-no-computador_23-2150010125.jpg",
-    professor: "Marcio Marciel",
+    professor: "Aline Sousa",
     frequency: "98%",
     absences: "06/18",
     hour: "35CD",
@@ -63,7 +63,7 @@ class _CadeiraPageState extends State<CadeiraPage> {
         width: MediaQuery.of(context).size.width * 0.90,
         height: 130,
         decoration: BoxDecoration(
-          color: Colors.red,
+          color: Colors.grey[350],
           borderRadius: BorderRadius.circular(8),
           image: DecorationImage(
             image: image,
@@ -120,19 +120,19 @@ class _CadeiraPageState extends State<CadeiraPage> {
       children: [
         Text(
           topText,
-          style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+          style: TextStyle(color: Colors.grey[900],fontSize: 20, fontWeight: FontWeight.bold),
         ),
         SizedBox(height: 4),
         Text(
           bottomText,
-          style: TextStyle(fontSize: 18),
+          style: TextStyle(color: Colors.grey[900],fontSize: 18),
         ),
       ],
     );
   }
 
   Widget buildAssessments(Discipline discipline) => Card(
-    color: Colors.white,
+    color: Colors.grey[350],
     shape: RoundedRectangleBorder(
       borderRadius: BorderRadius.circular(8.0),
     ),
@@ -155,7 +155,7 @@ class _CadeiraPageState extends State<CadeiraPage> {
     ),
   );
   Widget buildUnities(Discipline discipline) => Card(
-    color: Colors.white,
+    color: Colors.grey[350],
     shape: RoundedRectangleBorder(
       borderRadius: BorderRadius.circular(8.0),
     ),
