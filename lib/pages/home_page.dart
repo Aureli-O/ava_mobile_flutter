@@ -159,15 +159,29 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         backgroundColor: Colors.indigo,
         title: Text(
-          "Home",
+          "Bem-vindo!",
           style: TextStyle(
             fontSize: 18,
             color: Colors.grey[200],
           ),
         ),
+        actions: [
+           GestureDetector(
+             onTap: () {
+               Navigator.push(
+                 context,
+                 MaterialPageRoute(builder: (context) => ProfilePage()),
+               );
+             },
+             child: Container(
+               margin: EdgeInsets.only(right: 15),
+               child: Icon(Icons.account_circle_rounded),
+             ),
+           )
+         ],
       ),
       body: Card(
-        color: Colors.white,
+        color: Colors.grey[200],
         elevation: 8,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(16.0),

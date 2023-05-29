@@ -77,7 +77,7 @@ class MyCard extends StatelessWidget {
                       style: TextStyle(
                         fontSize: 24,
                         fontWeight: FontWeight.bold,
-                        color: Colors.white,
+                        color: Colors.grey[200],
                         shadows: _txtShadow,
                       )),
                   Text(
@@ -85,7 +85,7 @@ class MyCard extends StatelessWidget {
                     style: TextStyle(
                         fontSize: 18,
                         fontWeight: FontWeight.w600,
-                        color: Colors.white,
+                        color: Colors.grey[200],
                         shadows: _txtShadow),
                   ),
                   SizedBox(
@@ -96,8 +96,8 @@ class MyCard extends StatelessWidget {
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.only(
                         topLeft: Radius.circular(16.0),
-                        topRight: Radius.circular(16.0),
-                        bottomLeft: Radius.circular(0.0),
+                        topRight: Radius.circular(0.0),
+                        bottomLeft: Radius.circular(16.0),
                         bottomRight: Radius.circular(16.0),
                       ),
                     ),
@@ -151,7 +151,7 @@ class MyCard extends StatelessWidget {
         Text(
           topText,
           style: TextStyle(
-            color: Colors.white,
+            color: Colors.grey[200],
             fontSize: 20,
             fontWeight: FontWeight.bold,
             shadows: shadow,
@@ -160,7 +160,7 @@ class MyCard extends StatelessWidget {
         SizedBox(height: 4),
         Text(
           bottomText,
-          style: TextStyle(color: Colors.white, fontSize: 18, shadows: shadow),
+          style: TextStyle(color: Colors.grey[200], fontSize: 18, shadows: shadow),
         ),
       ],
     );
