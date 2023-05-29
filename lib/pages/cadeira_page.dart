@@ -140,8 +140,9 @@ class _CadeiraPageState extends State<CadeiraPage> {
     margin: EdgeInsets.symmetric(horizontal: 19, vertical: 12),
     child: Padding(
       padding: EdgeInsets.all(28.0),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Text(
             'Avaliações',
@@ -150,7 +151,7 @@ class _CadeiraPageState extends State<CadeiraPage> {
                 fontWeight: FontWeight.bold,
                 fontSize: 24),
           ),
-          SizedBox(height: 8.0),
+          Icon(Icons.arrow_drop_down_circle_outlined),
         ],
       ),
     ),
@@ -163,8 +164,9 @@ class _CadeiraPageState extends State<CadeiraPage> {
     margin: EdgeInsets.symmetric(horizontal: 19, vertical: 12),
     child: Padding(
       padding: EdgeInsets.all(28.0),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Text(
             'Unidades',
@@ -173,11 +175,9 @@ class _CadeiraPageState extends State<CadeiraPage> {
                 fontWeight: FontWeight.bold,
                 fontSize: 24),
           ),
-          SizedBox(height: 8.0),
+          Icon(Icons.arrow_drop_down_circle_outlined),
         ],
       ),
     ),
   );
-
-
 }
