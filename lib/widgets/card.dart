@@ -1,168 +1,168 @@
 // ignore_for_file: prefer_const_constructors
 
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import '../models/discipline.dart';
 import '../pages/cadeira_page.dart';
 
 class MyCard extends StatelessWidget {
-  final String NomeCadeira;
-  final String NomeProfessor;
-  final String Horarios;
-  final String Frequencia;
-  final String Sala;
+  final Discipline discipline;
 
-  MyCard({
-    required this.NomeCadeira,
-    required this.NomeProfessor,
-    required this.Horarios,
-    required this.Frequencia,
-    required this.Sala,
-  });
+  const MyCard({
+    Key? key,
+    required this.discipline,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    List<Shadow> _txtShadow = <Shadow>[
+      Shadow(
+        offset: Offset(-1.0, -1.0),
+        blurRadius: 0.0,
+        color: Color.fromARGB(255, 0, 0, 0),
+      ),
+      Shadow(
+        offset: Offset(1.0, -1.0),
+        blurRadius: 0.0,
+        color: Color.fromARGB(255, 0, 0, 0),
+      ),
+      Shadow(
+        offset: Offset(1.0, 1.0),
+        blurRadius: 0.0,
+        color: Colors.black,
+      ),
+      Shadow(
+        offset: Offset(-1.0, 1.0),
+        blurRadius: 0.0,
+        color: Color.fromARGB(255, 0, 0, 0),
+      ),
+    ];
     return GestureDetector(
       onTap: () => {
         Navigator.push(
-          context,
-          MaterialPageRoute(builder: (context) => CadeiraPage()),
-        ),
+            context, MaterialPageRoute(builder: (context) => CadeiraPage()))
       },
-      child: Padding(
-        padding: const EdgeInsets.fromLTRB(15, 10, 15, 10),
+      child: Card(
+        elevation: 4,
+        color: Colors.grey[350],
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(16.0),
+        ),
+        margin: EdgeInsets.symmetric(horizontal: 28, vertical: 12),
         child: Container(
-          height: 205,
           decoration: BoxDecoration(
-              color: Colors.grey[350], borderRadius: BorderRadius.circular(15)),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.baseline,
-            textBaseline: TextBaseline.alphabetic,
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              Padding(
-                padding: const EdgeInsets.fromLTRB(15, 10, 15, 5),
-                child: Text(
-                  NomeCadeira,
-                  style: GoogleFonts.inter(
-                    fontSize: 25,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.grey[900],
-                  ),
-                ),
+            borderRadius: BorderRadius.circular(16),
+            image: DecorationImage(
+              opacity: 2,
+              image: NetworkImage(
+                discipline.imagePath,
               ),
-              Padding(
-                padding: const EdgeInsets.fromLTRB(15, 5, 15, 5),
-                child: Text(
-                  NomeProfessor,
-                  style: GoogleFonts.inter(
-                    fontSize: 18,
-                    fontWeight: FontWeight.w700,
-                    color: Colors.grey[900],
-                  ),
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.fromLTRB(100, 0, 0, 10),
-                child: Container(
-                  width: 300,
-                  decoration: BoxDecoration(
-                    color: Colors.grey[400],
-                    borderRadius: BorderRadius.horizontal(
-                      left: Radius.circular(15),
-                      right: Radius.circular(2),
-                    ),
-                  ),
-                  child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: [
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.baseline,
-                        textBaseline: TextBaseline.alphabetic,
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.fromLTRB(10, 6, 10, 2),
-                            child: Text(
-                              Horarios,
-                              style: GoogleFonts.inter(
-                                fontSize: 14,
-                                fontWeight: FontWeight.bold,
-                                color: Colors.grey[900],
-                              ),
-                            ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.fromLTRB(10, 0, 10, 5),
-                            child: Text(
-                              "Horário",
-                              style: GoogleFonts.inter(
-                                fontSize: 10,
-                                fontWeight: FontWeight.w500,
-                                color: Colors.grey[900],
-                              ),
-                            ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.fromLTRB(10, 6, 10, 2),
-                            child: Text(
-                              Frequencia,
-                              style: GoogleFonts.inter(
-                                fontSize: 14,
-                                fontWeight: FontWeight.bold,
-                                color: Colors.grey[900],
-                              ),
-                            ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.fromLTRB(10, 0, 10, 6),
-                            child: Text(
-                              "Frequência",
-                              style: GoogleFonts.inter(
-                                fontSize: 10,
-                                fontWeight: FontWeight.w500,
-                                color: Colors.grey[900],
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.baseline,
-                        textBaseline: TextBaseline.alphabetic,
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.fromLTRB(10, 6, 10, 2),
-                            child: Text(
-                              Sala,
-                              style: GoogleFonts.inter(
-                                fontSize: 14,
-                                fontWeight: FontWeight.bold,
-                                color: Colors.grey[900],
-                              ),
-                            ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.fromLTRB(10, 0, 10, 5),
-                            child: Text(
-                              "Sala",
-                              style: GoogleFonts.inter(
-                                fontSize: 10,
-                                fontWeight: FontWeight.w500,
-                                color: Colors.grey[900],
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-            ],
+              fit: BoxFit.cover,
+            ),
           ),
+          child: Padding(
+              padding: EdgeInsets.only(
+                top: 24.0,
+                bottom: 0.0,
+                left: 30.0,
+                right: 0.0,
+              ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(discipline.name,
+                      style: TextStyle(
+                        fontSize: 24,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,
+                        shadows: _txtShadow,
+                      )),
+                  Text(
+                    discipline.professor,
+                    style: TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.w600,
+                        color: Colors.white,
+                        shadows: _txtShadow),
+                  ),
+                  SizedBox(
+                    height: 16,
+                  ),
+                  Card(
+                    color: Colors.black38.withOpacity(0.45),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(16.0),
+                        topRight: Radius.circular(16.0),
+                        bottomLeft: Radius.circular(0.0),
+                        bottomRight: Radius.circular(16.0),
+                      ),
+                    ),
+                    child: Padding(
+                      padding: EdgeInsets.only(
+                        top: 20.0,
+                        bottom: 24.0,
+                        left: 24.0,
+                        right: 28.0,
+                      ),
+                      child: Row(
+                        children: [
+                          Column(
+                            children: [
+                              _buildColumn(
+                                  discipline.absences, "Faltas", _txtShadow),
+                              SizedBox(
+                                height: 6,
+                              ),
+                              _buildColumn(
+                                  discipline.hour, "Horários", _txtShadow)
+                            ],
+                          ),
+                          SizedBox(width: 24),
+                          Column(
+                            children: [
+                              _buildColumn(
+                                  discipline.place, "Salas", _txtShadow),
+                              SizedBox(
+                                height: 6,
+                              ),
+                              _buildColumn(discipline.frequency, "Frequência",
+                                  _txtShadow)
+                            ],
+                          ),
+                        ],
+                      ),
+                    ),
+                  )
+                ],
+              )),
         ),
       ),
+    );
+  }
+
+  Widget _buildColumn(String topText, String bottomText, List<Shadow> shadow) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children: [
+        Text(
+          topText,
+          style: TextStyle(
+            color: Colors.white,
+            fontSize: 20,
+            fontWeight: FontWeight.bold,
+            shadows: shadow,
+          ),
+        ),
+        SizedBox(height: 4),
+        Text(
+          bottomText,
+          style: TextStyle(color: Colors.white, fontSize: 18, shadows: shadow),
+        ),
+      ],
     );
   }
 }

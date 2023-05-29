@@ -21,6 +21,7 @@ class _CadeiraPageState extends State<CadeiraPage> {
     frequency: "98%",
     absences: "06/18",
     hour: "35CD",
+    place: "D13",
   );
 
 

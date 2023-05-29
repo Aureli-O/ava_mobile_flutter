@@ -6,6 +6,7 @@ class Discipline {
   final String frequency;
   final String absences;
   final String hour;
+  final String place;
 
   const Discipline({
     required this.name,
@@ -15,5 +16,6 @@ class Discipline {
     required this.frequency,
     required this.absences,
     required this.hour,
+    required this.place,
   });
 }
