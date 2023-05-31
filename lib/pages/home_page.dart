@@ -103,11 +103,11 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   List<Discipline> disciplineM = [
     Discipline(
-      name: "Cáculo 1",
+      name: "Cálculo 1",
       professorImage:
-      "https://agendor-blog-uploads.s3.sa-east-1.amazonaws.com/2018/04/02165825/linguagem-corporal-masculina-02.jpg",
+          "https://agendor-blog-uploads.s3.sa-east-1.amazonaws.com/2018/04/02165825/linguagem-corporal-masculina-02.jpg",
       imagePath:
-      "https://i.pinimg.com/originals/1b/5b/5a/1b5b5ac9229b1e0b63a5cd77cae23798.jpg",
+          "https://i.pinimg.com/originals/1b/5b/5a/1b5b5ac9229b1e0b63a5cd77cae23798.jpg",
       professor: "Osvaldo",
       frequency: "100%",
       absences: "03/22",
@@ -115,7 +115,7 @@ class _HomePageState extends State<HomePage> {
       place: "D21",
     ),
     Discipline(
-      name: "Lógica de computação",
+      name: "Lógica de Programação",
       professorImage:
           "https://agendor-blog-uploads.s3.sa-east-1.amazonaws.com/2018/04/02165825/linguagem-corporal-masculina-02.jpg",
       imagePath:
@@ -127,7 +127,7 @@ class _HomePageState extends State<HomePage> {
       place: "D21",
     ),
     Discipline(
-      name: "Modelagem e requisitos",
+      name: "Modelagem e Requisitos de Sistemas",
       professorImage:
           "https://agendor-blog-uploads.s3.sa-east-1.amazonaws.com/2018/04/02165825/linguagem-corporal-masculina-02.jpg",
       imagePath:
@@ -139,11 +139,11 @@ class _HomePageState extends State<HomePage> {
       place: "D12",
     ),
     Discipline(
-      name: "Matemática Discreta",
+      name: "Arquitetura de Computadores",
       professorImage:
-      "https://agendor-blog-uploads.s3.sa-east-1.amazonaws.com/2018/04/02165825/linguagem-corporal-masculina-02.jpg",
+          "https://agendor-blog-uploads.s3.sa-east-1.amazonaws.com/2018/04/02165825/linguagem-corporal-masculina-02.jpg",
       imagePath:
-      "https://previews.123rf.com/images/pdreams/pdreams1405/pdreams140500005/28080238-colorful-random-number-math-background-illustration.jpg",
+          "https://previews.123rf.com/images/pdreams/pdreams1405/pdreams140500005/28080238-colorful-random-number-math-background-illustration.jpg",
       professor: "Rubens",
       frequency: "98%",
       absences: "06/18",
@@ -158,6 +158,13 @@ class _HomePageState extends State<HomePage> {
       backgroundColor: Colors.grey[200],
       appBar: AppBar(
         backgroundColor: Colors.indigo,
+        shape: ShapeBorder.lerp(
+          RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(16.0),
+          ),
+          null,
+          0,
+        ),
         title: Text(
           "Bem-vindo!",
           style: TextStyle(
@@ -166,27 +173,27 @@ class _HomePageState extends State<HomePage> {
           ),
         ),
         actions: [
-           GestureDetector(
-             onTap: () {
-               Navigator.push(
-                 context,
-                 MaterialPageRoute(builder: (context) => ProfilePage()),
-               );
-             },
-             child: Container(
-               margin: EdgeInsets.only(right: 15),
-               child: Icon(Icons.account_circle_rounded),
-             ),
-           )
-         ],
+          GestureDetector(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => ProfilePage()),
+              );
+            },
+            child: Container(
+              margin: EdgeInsets.only(right: 15),
+              child: Icon(Icons.account_circle_rounded),
+            ),
+          )
+        ],
       ),
       body: Card(
         color: Colors.grey[200],
-        elevation: 8,
+        //elevation: 8,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(16.0),
         ),
-        margin: EdgeInsets.symmetric(horizontal: 12, vertical: 12),
+        margin: EdgeInsets.symmetric(horizontal: 6, vertical: 6),
         child: ListView.builder(
           itemCount: disciplineM.length, // Número de elementos no seu array
           itemBuilder: (context, index) {

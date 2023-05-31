@@ -21,7 +21,7 @@ class _ProfilePageState extends State<ProfilePage> {
       registry: "2214763-2",
       ongoingCredits: "360",
       completedCredits: "720",
-      course: "Nutrição",
+      course: "Ciências da Computação",
       pmg: "7.52",
       birthday: "19/09/2004");
   // criei esse objeto ai q é so mudar
@@ -31,6 +31,13 @@ class _ProfilePageState extends State<ProfilePage> {
       backgroundColor: Colors.grey[200],
       appBar: AppBar(
         backgroundColor: Colors.indigo,
+        shape: ShapeBorder.lerp(
+          RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(16.0),
+          ),
+          null,
+          0,
+        ),
         title: Text(
           "Meu perfil",
           style: TextStyle(
