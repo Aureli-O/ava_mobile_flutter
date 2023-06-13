@@ -4,25 +4,25 @@ import '../models/discipline.dart';
 import '../widgets/profile.dart';
 
 class CadeiraPage extends StatefulWidget {
-  const CadeiraPage({Key? key}) : super(key: key);
-
+  CadeiraPage({Key? key, required this.disciplineM}) : super(key: key);
+  final Discipline disciplineM;
   @override
   State<CadeiraPage> createState() => _CadeiraPageState();
 }
 
 class _CadeiraPageState extends State<CadeiraPage> {
-  Discipline disciplineM = const Discipline(
-    name: "Cálculo 1",
-    professorImage:
-        "https://agendor-blog-uploads.s3.sa-east-1.amazonaws.com/2018/04/02165825/linguagem-corporal-masculina-02.jpg",
-    imagePath:
-        "https://i.pinimg.com/originals/1b/5b/5a/1b5b5ac9229b1e0b63a5cd77cae23798.jpg",
-    professor: "Osvaldo",
-    frequency: "100%",
-    absences: "03/22",
-    hour: "35AB",
-    place: "D21",
-  );
+  // Discipline disciplineM = const Discipline(
+  //   name: "Cálculo 1",
+  //   professorImage:
+  //       "https://agendor-blog-uploads.s3.sa-east-1.amazonaws.com/2018/04/02165825/linguagem-corporal-masculina-02.jpg",
+  //   imagePath:
+  //       "https://i.pinimg.com/originals/1b/5b/5a/1b5b5ac9229b1e0b63a5cd77cae23798.jpg",
+  //   professor: "Osvaldo",
+  //   frequency: "100%",
+  //   absences: "03/22",
+  //   hour: "35AB",
+  //   place: "D21",
+  // );
 
   @override
   Widget build(BuildContext context) {
@@ -38,7 +38,7 @@ class _CadeiraPageState extends State<CadeiraPage> {
           0,
         ),
         title: Text(
-          disciplineM.name,
+          widget.disciplineM.name,
           style: TextStyle(
             fontSize: 18,
             color: Colors.grey[200],
@@ -48,17 +48,17 @@ class _CadeiraPageState extends State<CadeiraPage> {
       body: ListView(physics: BouncingScrollPhysics(), children: [
         Padding(
             padding: EdgeInsets.symmetric(vertical: 20),
-            child: buildIcon(disciplineM)),
-        buildInfos(disciplineM),
+            child: buildIcon(widget.disciplineM)),
+        buildInfos(widget.disciplineM),
         SizedBox(
           height: 20,
         ),
-        buildImageRectangle(disciplineM),
+        buildImageRectangle(widget.disciplineM),
         SizedBox(
           height: 10,
         ),
-        buildAssessments(disciplineM),
-        buildUnities(disciplineM)
+        buildAssessments(widget.disciplineM),
+        buildUnities(widget.disciplineM)
       ]),
     );
   }

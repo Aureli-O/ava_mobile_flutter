@@ -43,7 +43,7 @@ class MyCard extends StatelessWidget {
     return GestureDetector(
       onTap: () => {
         Navigator.push(
-            context, MaterialPageRoute(builder: (context) => CadeiraPage()))
+            context, MaterialPageRoute(builder: (context) => CadeiraPage(disciplineM: discipline,)))
       },
       child: Card(
         elevation: 4,
